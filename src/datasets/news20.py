@@ -17,8 +17,6 @@ from .misc import clean_text
 
 import config
 
-import pdb
-
 classes = [ 'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware','comp.windows.x',
             'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey',
             'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space',
@@ -69,7 +67,7 @@ class News20_Dataset():
 
 
 class MyNews20(Dataset):
-    def __init__(self, root:str, train:bool, normal_classes):
+    def __init__(self, root:str, train:bool, normal_classes:list):
         super(Dataset).__init__()
 
         self.normal_classes = normal_classes
